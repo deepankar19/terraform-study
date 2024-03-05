@@ -16,7 +16,7 @@ provider "aws" {
 resource "aws_instance" "jenkins" {
   ami                         = "ami-05e411cf591b5c9f6"
   instance_type               = "t2.micro"
-  key_name                    = "aws-devops-key-pair"
+  key_name                    = "aws-devops-key-pair-terraform"
   associate_public_ip_address = true
   vpc_security_group_ids      = [aws_security_group.jenkins-sg.id]
   user_data                   = file("install_jenkins.sh")
