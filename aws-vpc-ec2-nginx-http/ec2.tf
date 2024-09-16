@@ -6,12 +6,12 @@ resource "aws_instance" "nginx-server" {
   associate_public_ip_address = true
 
   user_data = <<-EOF
-                #!/bin/bash
-                sudo yum update -y
-                sudo yum install nginx -y
-                sudo systemctl start nginx
-                sudo systemctl enable nginx
-                EOF    
+            #!/bin/bash
+            sudo yum update -y
+            sudo yum install nginx -y
+            sudo systemctl start nginx
+            sudo systemctl enable nginx
+            EOF    
   tags = {
     Name = "NginxServer"
   }

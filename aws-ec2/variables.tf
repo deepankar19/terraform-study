@@ -1,7 +1,7 @@
 variable "region" {
-    description = "this is variable were region value is added"
-    type = string
-    default = "ap-south-1"
+  description = "this is variable were region value is added"
+  type        = string
+  default     = "ap-south-1"
 }
 
 variable "ami-image" {
